@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -184,6 +184,39 @@
 
         .btn-accent::before {
             background: var(--accent);
+        }
+
+        
+        /* Section Headers - Uniform Styling */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+        }
+
+        .section-header .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--grey);
+            margin-top: 1.5rem;
         }
 
         /* Section Styling */
@@ -603,7 +636,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="social-icons">
-                <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+                <a href="https://www.youtube.com" target="_blank" title="YouTube">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
                 </a>
                 <a href="https://www.facebook.com/profile.php?id=61579940867015" target="_blank" title="Facebook">
@@ -634,7 +667,9 @@
     
     <section id="about" class="section">
         <div class="container">
-            <h2>ABOUT SUPERNOVA</h2>
+            <div class="section-header">
+                <h2>ABOUT SUPERNOVA</h2>
+            </div>
             <div class="about-content">
                 <p>When Franklin Rabon witnessed Oasis light up Wembley Stadium, something ignited. The raw power, the massive singalongs, the pure rock and roll electricity—it was everything that made him fall in love with Oasis in the first place. Franklin left Wembley with more than memories—he left with a purpose.</p>
                 
@@ -650,7 +685,9 @@
     
     <section id="gigs" class="section">
         <div class="container">
-            <h2>UPCOMING GIGS</h2>
+            <div class="section-header">
+                <h2>UPCOMING GIGS</h2>
+            </div>
             <div class="gigs-list">
                 <div class="gig-item">
                     <div class="gig-date">
@@ -671,7 +708,9 @@
     </section>
     <section id="media" class="section">
         <div class="container">
-            <h2>MEDIA</h2>
+            <div class="section-header">
+                <h2>MEDIA</h2>
+            </div>
             <div class="coming-soon">
                 <p style="font-size: 2rem; font-weight: 700; letter-spacing: 3px; color: var(--accent);">COMING SOON</p>
                 <p style="font-size: 1.2rem; color: var(--grey); margin-top: 1rem;">Photos, videos, and more will be available here soon.</p>
@@ -684,14 +723,14 @@
 
     <section id="contact">
         <div class="section-header">
-            <h2>Get In Touch</h2>
+            <h2>GET IN TOUCH</h2>
             <p class="section-subtitle">Booking & Inquiries</p>
         </div>
         <div class="contact-content">
             <div class="contact-info">
                 <h3>Book Supernova</h3>
                 <p>For booking inquiries, private events, and festival appearances:</p>
-                <p><strong>Email:</strong> <a href="mailto:fjrabon@gmail.com">fjrabon@gmail.com</a></p>
+                <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#75131f0714171a1b351218141c195b161a18"><span class="__cf_email__" data-cfemail="d1b7bba3b0b3bebf91b6bcb0b8bdffb2bebc">[email&#160;protected]</span></a></p>
             </div>
 
         </div>
@@ -701,7 +740,7 @@
         <p>&copy; 2025 Supernova - A Tribute To Oasis. All Rights Reserved.</p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -710,12 +749,4 @@
                 if (target) {
                     target.scrollIntoView({
                         behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySel
+ 
