@@ -700,7 +700,7 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#gigs">Gigs</a></li>
-                <li><a href="#media">Media</a></li>
+                <li><a href="#video">Video</a></li>
                 <li><a href="#merch">Merch</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -788,7 +788,7 @@
                         <h3>MadLife Stage and Studios</h3>
                         <p class="gig-location">Woodstock, GA</p>
                         <p class="gig-time">Saturday, August 8, 2026 - 9:30 PM</p>
-                        <p style="font-style: italic; color: var(--accent); margin-top: 0.5rem;">Performing "What's The Story Morning Glory" + More</p>
+                        <p style="font-style: italic; color: var(--accent); margin-top: 0.5rem;">Performing "(What's the Story) Morning Glory?" + More</p>
                     </div>
                     <div class="gig-action">
                         <a href="https://www.eventbrite.com/e/supernova-oasis-tribute-whats-the-story-morning-glory-more-tickets-1984439807885" class="btn" target="_blank">Get Tickets</a>
@@ -797,30 +797,79 @@
             </div>
         </div>
     </section>
-    <section id="media" class="section">
+    <section id="video" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>MEDIA</h2>
+                <h2>VIDEO</h2>
             </div>
             <div style="max-width: 1000px; margin: 0 auto;">
-                <!-- Featured Video -->
-                <div style="margin-bottom: 4rem;">
-                    <h3 style="text-align: center; font-size: 1.5rem; color: var(--accent); margin-bottom: 2rem; letter-spacing: 2px;">LIVE PERFORMANCE</h3>
+                <!-- Video Player -->
+                <div style="margin-bottom: 3rem;">
                     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,0.5); border: 2px solid var(--accent);">
-                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/ydQOMqtHLeQ" title="Supernova Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe id="videoPlayer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/BJcFTdbqdSU" title="Supernova Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
                 
-                <!-- Photo Gallery Placeholder -->
-                <div style="text-align: center; padding: 3rem 0;">
-                    <h3 style="font-size: 1.5rem; color: var(--accent); margin-bottom: 1.5rem; letter-spacing: 2px;">PHOTO GALLERY</h3>
-                    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 3rem; border-radius: 10px; border: 2px solid #333;">
-                        <p style="font-size: 1.2rem; color: var(--grey);">More photos from our live shows coming soon!</p>
+                <!-- Video Selection List -->
+                <div style="text-align: center;">
+                    <h3 style="font-size: 1.3rem; color: var(--accent); margin-bottom: 2rem; letter-spacing: 2px;">SELECT A VIDEO</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto;">
+                        <div class="video-thumb" data-video="BJcFTdbqdSU" style="cursor: pointer; border: 3px solid var(--accent); border-radius: 8px; overflow: hidden; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                            <img src="https://img.youtube.com/vi/BJcFTdbqdSU/maxresdefault.jpg" alt="4-Minute Promo" style="width: 100%; display: block; transition: transform 0.3s;">
+                        </div>
+                        <div class="video-thumb" data-video="bhhHdXLZlRE" style="cursor: pointer; border: 3px solid #333; border-radius: 8px; overflow: hidden; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                            <img src="https://img.youtube.com/vi/bhhHdXLZlRE/maxresdefault.jpg" alt="Wonderwall" style="width: 100%; display: block; transition: transform 0.3s;">
+                        </div>
+                        <div class="video-thumb" data-video="RM6vNaLpuUk" style="cursor: pointer; border: 3px solid #333; border-radius: 8px; overflow: hidden; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                            <img src="https://img.youtube.com/vi/RM6vNaLpuUk/maxresdefault.jpg" alt="Champagne Supernova" style="width: 100%; display: block; transition: transform 0.3s;">
+                        </div>
+                        <div class="video-thumb" data-video="USboatHIHwc" style="cursor: pointer; border: 3px solid #333; border-radius: 8px; overflow: hidden; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                            <img src="https://img.youtube.com/vi/USboatHIHwc/maxresdefault.jpg" alt="Live Forever" style="width: 100%; display: block; transition: transform 0.3s;">
+                        </div>
+                        <div class="video-thumb" data-video="FtnnAnR048c" style="cursor: pointer; border: 3px solid #333; border-radius: 8px; overflow: hidden; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                            <img src="https://img.youtube.com/vi/FtnnAnR048c/maxresdefault.jpg" alt="Morning Glory" style="width: 100%; display: block; transition: transform 0.3s;">
+                        </div>
+                        <div class="video-thumb" data-video="ydQOMqtHLeQ" style="cursor: pointer; border: 3px solid #333; border-radius: 8px; overflow: hidden; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                            <img src="https://img.youtube.com/vi/ydQOMqtHLeQ/maxresdefault.jpg" alt="Hello" style="width: 100%; display: block; transition: transform 0.3s;">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // Video selector functionality
+        document.querySelectorAll('.video-thumb').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                const videoId = this.getAttribute('data-video');
+                const iframe = document.getElementById('videoPlayer');
+                iframe.src = 'https://www.youtube.com/embed/' + videoId;
+                
+                // Update thumbnail borders to show active selection
+                document.querySelectorAll('.video-thumb').forEach(t => {
+                    t.style.borderColor = '#333';
+                });
+                this.style.borderColor = 'var(--accent)';
+            });
+            
+            // Hover effects
+            thumb.addEventListener('mouseenter', function() {
+                const img = this.querySelector('img');
+                img.style.transform = 'scale(1.05)';
+                if (this.style.borderColor !== 'rgb(255, 184, 0)') {
+                    this.style.borderColor = '#666';
+                }
+            });
+            thumb.addEventListener('mouseleave', function() {
+                const img = this.querySelector('img');
+                img.style.transform = 'scale(1)';
+                if (this.style.borderColor !== 'rgb(255, 184, 0)') {
+                    this.style.borderColor = '#333';
+                }
+            });
+        });
+    </script>
 
     <section id="merch" class="section">
         <div class="container">
@@ -848,6 +897,16 @@
         </div>
         <div class="contact-content">
                         <div class="contact-info">
-                <h3>Book Supernova</h3>
-                <p>For booking inquiries, private events, and festival appearances:</p>
-<p><strong>Email:</strong> <a href="mailto:fjrabon@gmail.com">fjrabon@gmail.com</a></p>
+                <p><strong>For Bookings:</strong> <a href="mailto:ryanmclifford@gmail.com">ryanmclifford@gmail.com</a></p>
+                <p><strong>For All Other Inquiries:</strong> <a href="mailto:fjrabon@gmail.com">fjrabon@gmail.com</a></p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Supernova - A Tribute to Oasis. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
