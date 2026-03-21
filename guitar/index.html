@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guitarist audition for Supernova - Oasis tribute band. Seeking lead guitarist and vocalist for Noel Gallagher role.">
+    <title>Guitarist Audition - Supernova - Oasis Tribute Band</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0A0A'/%3E%3Crect x='10' y='10' width='80' height='80' fill='none' stroke='white' stroke-width='6'/%3E%3Ctext x='50' y='70' font-family='Arial,sans-serif' font-size='50' font-weight='bold' fill='white' text-anchor='middle'%3ESN%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FFFFFF;
+            --dark: #0A0A0A;
+            --accent: #FFB800;
+            --grey: #808080;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            background: var(--dark);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.85)), url('hero-image.png') center center/cover no-repeat;
+            z-index: -1;
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 3rem 0;
+            border-bottom: 2px solid #333;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #ddd;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-bottom: 0.8rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "▸";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem;
+        }
+
+        /* Video Section */
+        .video-container {
+            margin: 2rem 0;
+            border: 3px solid var(--accent);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-link {
+            display: block;
+            padding: 1rem;
+            background: rgba(10, 10, 10, 0.9);
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .video-link:hover {
+            background: rgba(255, 184, 0, 0.1);
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border: 3px solid var(--accent);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        .email-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .email-link:hover {
+            color: var(--primary);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(255, 184, 0, 0.1) 0%, rgba(255, 184, 0, 0.05) 100%);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--primary);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            p, ul li {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-bg"></div>
+        <h1>GUITARIST AUDITION</h1>
+        <p class="hero-subtitle">Seeking Lead Guitarist/Vocalist for Noel Gallagher Role</p>
+        <a href="/" class="back-link">← Back to Main Site</a>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>About The Position</h2>
+            <ul>
+                <li>3-5 shows per month in Southeast US region (GA, FL, TN, AL, SC, NC)</li>
+                <li>Primarily weekend performances</li>
+                <li>Note-for-note authentic Oasis renditions</li>
+                <li>South Atlanta based</li>
+                <li>Paid position - band members receive percentage of gross pay</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Requirements</h2>
+            <ul>
+                <li>Strong lead guitar ability</li>
+                <li><strong>Lead vocal ability with tenor range</strong> - must sing Noel parts in full voice</li>
+                <li>Backing vocals</li>
+                <li>Ability to balance rhythm and lead guitar parts</li>
+                <li>Commitment to authentic Oasis sound</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>Note:</strong> We strive to play as close to note-for-note renditions as possible, so there is not much creative freedom in this gig.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Stage Setup</h2>
+            <ul>
+                <li>Quiet stage / amp-less preferred (direct via modeler/cab sim)</li>
+                <li>In-ear monitors</li>
+                <li>Band can provide IEMs and/or amp modeling setup if needed</li>
+            </ul>
+
+            <h3>Gear</h3>
+            <p>For authenticity, we prefer period-correct guitars matching Noel's setup. <strong>Band can provide appropriate guitars if needed.</strong></p>
+        </div>
+
+        <div class="section">
+            <h2>Audition Process</h2>
+            <p>Submit video recordings of yourself performing these two songs to the best of your ability:</p>
+
+            <h3>1. Don't Look Back In Anger</h3>
+            <p><strong>We're evaluating:</strong> Lead vocals + guitar solo accuracy</p>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/TG8yXHy7cME" title="Don't Look Back In Anger - Reference" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <a href="https://www.youtube.com/watch?v=TG8yXHy7cME" target="_blank" class="video-link">Open in YouTube →</a>
+            </div>
+
+            <h3>2. Slide Away</h3>
+            <p><strong>We're evaluating:</strong> Backing vocals + rhythm/lead balance</p>
+            <p style="font-style: italic; color: var(--grey);">Use any 2025 live recordings as reference</p>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/sEJqF3Ek09w" title="Slide Away - Reference" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <a href="https://www.youtube.com/watch?v=sEJqF3Ek09w" target="_blank" class="video-link">Open in YouTube →</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="contact-box">
+                <h3>How To Apply</h3>
+                <p>Send your audition videos to:</p>
+                <p><a href="mailto:booking@thesupernovatribute.com" class="email-link">booking@thesupernovatribute.com</a></p>
+                <p style="margin-top: 1.5rem; color: var(--grey);">If things sound good, we'll be in touch to schedule a formal rehearsal/audition.</p>
+            </div>
+
+            <div class="contact-box" style="margin-top: 2rem;">
+                <h3>Questions?</h3>
+                <p>Feel free to reach out with any general questions about the gig:</p>
+                <p><a href="mailto:booking@thesupernovatribute.com" class="email-link">booking@thesupernovatribute.com</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
