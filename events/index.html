@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book Supernova for your private event - weddings, corporate parties, birthdays, and more. Professional Oasis tribute band available worldwide.">
+    <title>Private Events - Supernova - Oasis Tribute Band</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0A0A'/%3E%3Crect x='10' y='10' width='80' height='80' fill='none' stroke='white' stroke-width='6'/%3E%3Ctext x='50' y='70' font-family='Arial,sans-serif' font-size='50' font-weight='bold' fill='white' text-anchor='middle'%3ESN%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FFFFFF;
+            --dark: #0A0A0A;
+            --accent: #FFB800;
+            --grey: #808080;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            background: var(--dark);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-bottom: 3rem;
+            background: var(--dark);
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4.5rem;
+            letter-spacing: 6px;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 3rem 0;
+            border-bottom: 2px solid #333;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.8rem;
+            letter-spacing: 3px;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            color: #ddd;
+            line-height: 1.8;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--primary);
+        }
+
+        /* Event Types Grid */
+        .event-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .event-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border: 2px solid var(--accent);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 184, 0, 0.3);
+        }
+
+        .event-card h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        /* What We Provide */
+        .provide-list {
+            max-width: 700px;
+            margin: 2rem auto;
+        }
+
+        .provide-list ul {
+            list-style: none;
+        }
+
+        .provide-list li {
+            font-size: 1.15rem;
+            color: #ddd;
+            margin-bottom: 1rem;
+            padding-left: 2.5rem;
+            position: relative;
+        }
+
+        .provide-list li:before {
+            content: "▸";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Video Section */
+        .video-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            border: 3px solid var(--accent);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border: 3px solid var(--accent);
+            border-radius: 10px;
+            padding: 3rem;
+            margin: 2rem auto;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .contact-box h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-box p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .email-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            padding: 1rem 2rem;
+            border: 2px solid var(--accent);
+            border-radius: 5px;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .email-link:hover {
+            background: var(--accent);
+            color: var(--dark);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(255, 184, 0, 0.1) 0%, rgba(255, 184, 0, 0.05) 100%);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--primary);
+            font-size: 1.15rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .intro-text {
+                font-size: 1.1rem;
+            }
+
+            p, .provide-list li {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+
+            .event-types {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="../supernova-logo.png" alt="Supernova Logo" style="max-width: 500px; width: 90%; margin-bottom: 2rem;">
+        <h1>PRIVATE EVENTS</h1>
+        <p class="hero-subtitle">We Play Oasis — You Throw the Party</p>
+        <div style="max-width: 800px; width: 90%; margin: 2rem auto; border: 3px solid var(--accent); border-radius: 10px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.5);">
+            <img src="events.png" alt="Supernova Live" style="width: 100%; height: auto; display: block;">
+        </div>
+        <a href="/" class="back-link">← Back to Main Site</a>
+    </div>
+
+    <div class="container">
+        <p class="intro-text">Looking for live entertainment that will make your event unforgettable? Supernova brings the ultimate Oasis experience to private events of all kinds.</p>
+
+        <div class="section">
+            <h2>Event Types</h2>
+            <div class="event-types">
+                <div class="event-card">
+                    <h3>Corporate Events</h3>
+                </div>
+                <div class="event-card">
+                    <h3>Weddings & Receptions</h3>
+                </div>
+                <div class="event-card">
+                    <h3>Birthday Parties</h3>
+                </div>
+                <div class="event-card">
+                    <h3>Private Functions</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>What We Provide</h2>
+            <div class="provide-list">
+                <ul>
+                    <li>Full 90-120 minute Oasis tribute show</li>
+                    <li>Professional sound system</li>
+                    <li>Flexible setlist adapted to your event</li>
+                </ul>
+            </div>
+            <div class="highlight-box">
+                <p>Our band members have extensive experience performing at private events, with hundreds of successful parties under our belts.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>See Us In Action</h2>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/atYaw6yT3G8" title="Supernova Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="contact-box">
+                <h3>Book Supernova for Your Event</h3>
+                <p>Available Worldwide</p>
+                <p style="font-size: 1rem; color: var(--grey);">Contact us for availability and pricing.</p>
+                <a href="mailto:booking@thesupernovatribute.com" class="email-link">booking@thesupernovatribute.com</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
