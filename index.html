@@ -857,6 +857,20 @@
                 </div>
                 <div class="gig-item">
                     <div class="gig-date">
+                        <span class="date-day">24</span>
+                        <span class="date-month">JUL</span>
+                    </div>
+                    <div class="gig-details">
+                        <h3>State Theatre</h3>
+                        <p class="gig-location">Falls Church, VA</p>
+                        <p class="gig-time">Friday, July 24, 2026 - 7:00 PM</p>
+                    </div>
+                    <div class="gig-action">
+                        <a href="https://thestatetheatre.freshtix.com/events/supernova0724" class="btn" target="_blank">Get Tickets</a>
+                    </div>
+                </div>
+                <div class="gig-item">
+                    <div class="gig-date">
                         <span class="date-day">08</span>
                         <span class="date-month">AUG</span>
                     </div>
@@ -944,13 +958,16 @@
             thumb.addEventListener('click', function() {
                 const videoId = this.getAttribute('data-video');
                 const iframe = document.getElementById('videoPlayer');
-                iframe.src = 'https://www.youtube.com/embed/' + videoId;
+                iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
                 
                 // Update thumbnail borders to show active selection
                 document.querySelectorAll('.video-thumb').forEach(t => {
                     t.style.borderColor = '#333';
                 });
                 this.style.borderColor = 'var(--accent)';
+                
+                // Smoothly scroll the video player into view so users can see it
+                iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
             
             // Hover effects
