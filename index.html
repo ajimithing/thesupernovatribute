@@ -856,6 +856,25 @@
             "@type": "MusicGroup",
             "name": "Supernova – A Tribute to Oasis"
           }
+        },
+        {
+          "@type": "MusicEvent",
+          "name": "Supernova – A Tribute to Oasis at Songbirds",
+          "startDate": "2026-10-02",
+          "location": {
+            "@type": "Place",
+            "name": "Songbirds",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Chattanooga",
+              "addressRegion": "TN",
+              "addressCountry": "US"
+            }
+          },
+          "performer": {
+            "@type": "MusicGroup",
+            "name": "Supernova – A Tribute to Oasis"
+          }
         }
       ]
     }
@@ -1080,6 +1099,20 @@
                         <a href="https://www.eventbrite.com/e/supernova-oasis-tribute-whats-the-story-morning-glory-more-tickets-1984439807885" class="btn" target="_blank">Get Tickets</a>
                     </div>
                 </div>
+                <div class="gig-item">
+                    <div class="gig-date">
+                        <span class="date-day">02</span>
+                        <span class="date-month">OCT</span>
+                    </div>
+                    <div class="gig-details">
+                        <h3>Songbirds</h3>
+                        <p class="gig-location">Chattanooga, TN</p>
+                        <p class="gig-time">Friday, October 2, 2026 - 6:00 PM</p>
+                    </div>
+                    <div class="gig-action">
+                        <a href="https://www.eventim.us/event/tickets/690393" class="btn" target="_blank">Get Tickets</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1195,9 +1228,21 @@
         </div>
         <div class="contact-content">
                         <div class="contact-info">
-                <p><strong>For Bookings:</strong> <a href="mailto:booking@thesupernovatribute.com">booking@thesupernovatribute.com</a></p>
-                <p><strong>For All Other Inquiries:</strong> <a href="mailto:fjrabon@gmail.com">fjrabon@gmail.com</a></p>
+                <p><strong>For Bookings:</strong> <a id="booking-email" href="#">Loading...</a></p>
+                <p><strong>For All Other Inquiries:</strong> <a id="inquiry-email" href="#">Loading...</a></p>
             </div>
+            <script>
+            (function(){
+                var b='booking';var d='thesupernovatribute';var t='com';
+                var e1=b+'@'+d+'.'+t;
+                var a1=document.getElementById('booking-email');
+                a1.href='mai'+'lto:'+e1;a1.textContent=e1;
+                var u='fjrabon';var g='gmail';
+                var e2=u+'@'+g+'.'+t;
+                var a2=document.getElementById('inquiry-email');
+                a2.href='mai'+'lto:'+e2;a2.textContent=e2;
+            })();
+            </script>
 
             
         </div>
